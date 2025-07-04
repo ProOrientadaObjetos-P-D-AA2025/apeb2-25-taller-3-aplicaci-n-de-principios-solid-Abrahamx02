@@ -40,8 +40,13 @@ public class VentasTvs {
     }
     
         
-    public String obtenerMarcasVendidas(){
-        return marcasVendidas;
+    public String listarMarcasVendidas() {
+        StringBuilder sb = new StringBuilder();
+        for (Televisor t : televisores) {
+            sb.append(t.obtenerMarca()).append("\n");
+        }
+        return sb.toString();
     }
-    
 }
+    
+

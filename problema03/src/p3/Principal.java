@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package p3;
+/*package p3;
 
 import p1.MatriculaCampamento;
 import p1.MatriculaColegio;
@@ -11,11 +6,6 @@ import p1.MatriculaEscuela;
 import p1.MatriculaJardin;
 import p1.MatriculaMaternal;
 import p2.TipoMatricula;
-
-/**
- *
- * @author reroes
- */
 public class Principal {
     public static void main(String[] args) {
         TipoMatricula tipos = new TipoMatricula();
@@ -35,5 +25,27 @@ public class Principal {
         tipos.establecerMatriculaColegio(mcolegio);
         tipos.establecerPromedioTarifas();
         System.out.printf("%s\n", tipos);
+    }
+}
+*/
+
+package p1;
+
+import java.util.ArrayList;
+
+public class Principal {
+    public static void main(String[] args) {
+        ArrayList<Matricula> listaMatriculas = new ArrayList<>();
+
+        listaMatriculas.add(new MatriculaCampamento());
+        listaMatriculas.add(new MatriculaColegio());
+        listaMatriculas.add(new MatriculaEscuela());
+        listaMatriculas.add(new MatriculaJardin());
+        listaMatriculas.add(new MatriculaMaternal());
+
+        for (Matricula m : listaMatriculas) {
+            m.establecerTarifa();
+            System.out.printf("Tarifa: %.2f\n", m.obtenerTarifa());
+        }
     }
 }

@@ -14,7 +14,7 @@ import paquete004.PagoTelefonoConvencional;
  *
  * @author reroes
  */
-public class BilleteraPagos {
+public abstract class BilleteraPagos {
     public Persona persona;
     public double gastoPagos;
     public String mes;
@@ -27,12 +27,25 @@ public class BilleteraPagos {
     public PagoTelefonoConvencional telefonoCasa;
     public PagoTelefonoConvencional telefonoFinca;
     
+    public abstract double calcularPago();
+    
     public String toString(){
-        /*
-            Se debe presentar el reporte que incluya
-            información correspondiente oportuna
-        */
-        return "Presentar Reporte";
+         
+        return """
+               Presentar Reporte
+               =================
+               Nombre:"""+persona+
+                "\nMes:"+mes+
+                "\nPago Del Agua Potable:"+aguaCasa+
+                "\nPago Del Agua Potable Del Comercio:"+aguaComercio+
+                "\nPago De La Luz Electrica De Casa:"+luzCasa+
+                "\nPago De La Luz Electrica De Comercio:"+luzComercio+
+                "\nPago Predial:"+casa1+
+                "\nPago Predial secundario:"+casa2+
+                "\nPago Telefono Convencional Casa:"+telefonoCasa+
+                "\nPago Telefono Convencional finca:"+telefonoFinca+
+                "\nGastos de Pagos:"+gastoPagos
+                ;
     }
     
 }

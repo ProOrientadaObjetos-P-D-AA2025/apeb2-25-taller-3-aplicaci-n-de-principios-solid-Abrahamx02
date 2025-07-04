@@ -5,12 +5,13 @@
 package paquete004;
 
 import paquete001.Persona;
+import paquete003.BilleteraPagos;
 
 /**
  *
  * @author reroes
  */
-public class PagoAguaPotable {
+public class PagoAguaPotable extends BilleteraPagos {
     public double calcularPago(String tipo){
         double pago = 0;
         if(tipo.equals("comercial")){

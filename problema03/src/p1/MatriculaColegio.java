@@ -1,17 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package p1;
-
-/**
- *
- * @author reroes
- */
+/*package p1;
 public class MatriculaColegio {
-    private double tarifa;
-    
+    private double tarifa;   
     public void establecerTarifa(){
         // tarifa = costo deportes + costo folletos + 
         //          costo uniformes + costo laboratorios
@@ -20,5 +9,13 @@ public class MatriculaColegio {
         
     public double obtenerTarifa(){
         return tarifa;
+    }
+}
+*/
+package p1;
+public class MatriculaColegio extends Matricula {
+    @Override
+    public void establecerTarifa() {
+        tarifa = 150.50;
     }
 }
